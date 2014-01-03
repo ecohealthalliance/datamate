@@ -1,0 +1,14 @@
+<template name="entriesList">
+  <div class="entries">
+    <!--loop through entries in collection-->
+    {{#each entriesWithRank}}
+      {{> entryItem}}
+    {{/each}}
+
+    <!--load more entries-->
+    {{#if hasMoreEntries}}
+      <a class="load-more" href="{{nextPath}}">Load more</a>
+    {{/if}}
+
+  </div>
+</template>

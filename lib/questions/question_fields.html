@@ -1,0 +1,45 @@
+<template name="question_fields">
+    <div class="control-group">
+        <label class="control-label" for="questionNumber">Question Number</label>
+        <div class="controls">
+            <input name="questionNumber" type="text" value="{{questionNumber}}" placeholder="Unique number (no characters)"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="questionTitle">Question Title (camelCase)</label>
+        <div class="controls">
+            <input name="questionTitle" type="text" value="{{questionTitle}}" placeholder="Unique title for question"/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="question">Question</label>
+        <div class="controls">
+            <textarea name="question" type="text" placeholder="Question">{{question}}</textarea>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="questionHelper">Question Helper</label>
+        <div class="controls">
+            <textarea name="questionHelper" type="text" placeholder="Text to help user enter value">{{questionHelper}}</textarea>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="questionType">Question Type</label>
+        <div class="controls">
+            {{> type_drop}}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="questionDrop">Dropdown Options</label>
+        <div class="controls">
+            <textarea name="questionDrop" type="text" value="{{questionDrop}}" placeholder="Enter comma seperated dropdown values (see About)"/>
+        </div>
+    </div>
+
+</template>
+

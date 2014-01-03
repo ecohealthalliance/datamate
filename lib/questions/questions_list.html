@@ -1,0 +1,14 @@
+<template name="questionsList">
+  <div class="entries">
+    <!--loop through questions in collection-->
+    {{#each questionsWithRank}}
+      {{> questionItem}}
+    {{/each}}
+
+    <!--load more questions-->
+    {{#if hasMoreQuestions}}
+      <a class="load-more" href="{{nextPath}}">Load more</a>
+    {{/if}}
+
+  </div>
+</template>
