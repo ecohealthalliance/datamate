@@ -3,10 +3,11 @@
   <div class="entries">
     <!--loop through questions in collection-->
     {{#each questionsWithRank}}
-      {{> questionItem}}
+      {{> questionsListItem}}
     {{/each}}
 
     <!--load more questions-->
+    <!--TODO: don't jump to top of page on 'load more'-->
     {{#if hasMoreQuestions}}
       <a class="load-more" href="{{nextPath}}">Load more</a>
     {{/if}}

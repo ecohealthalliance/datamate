@@ -1,8 +1,57 @@
 <template name="questionView">
-  
+  {{#with currentQuestion}}
+	<div class="main">
+	  <table class="table table-striped table-hover">
+	      <thead>
+	        <tr>
+
+	          <td><h2>Question</h2></td>
+	          <td><h2>Value</h2></td>
+	        
+	        </tr>
+	      </thead>
+
+	      <tbody>
+
     <tr>
-      <td><strong> [{{questionNumber}}] </strong> {{question}} </td>
-      <td> {{answer questionTitle}} </td>
+      <td> Question Number</td>
+      <td> {{questionNumber}} </td>
     </tr>
 
+
+    <tr>
+    	<td>Question Title (camelCase)</td>
+        <td>{{questionTitle}}</td>
+    </tr>
+
+    <tr>
+    	<td>Question</td>
+    	<td>{{question}}</td>
+    </tr>
+
+    <tr>
+    	<td>Question Helper</td>
+        <td>{{questionHelper}}</td>
+    </tr>
+
+    <tr>
+    	<td>Question Type</td>
+        <td>
+            {{questionType}}
+        </td>
+    </tr>
+
+    {{#if dropDown}}
+    <tr>
+    	<td>Dropdown Options</td>
+        <td>{{questionDrop}}<td/>
+    </tr>
+    {{/if}}
+
+	      </tbody>
+      </table>
+      
+  </div>
+  
+  {{/with}}
 </template>

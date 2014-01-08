@@ -1,4 +1,4 @@
-<template name="question_fields">
+<template name="questionFields">
     <div class="control-group">
         <label class="control-label" for="questionNumber">Question Number</label>
         <div class="controls">
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="control-group">
+    <div class="control-group" style="display:none;" id="dropOptions">
         <label class="control-label" for="questionDrop">Dropdown Options</label>
         <div class="controls">
             <textarea name="questionDrop" type="text" value="{{questionDrop}}" placeholder="Enter comma seperated dropdown values (see About)"/>
