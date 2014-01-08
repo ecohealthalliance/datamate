@@ -1,0 +1,20 @@
+<template name="entriesListItem">
+  <div class="entry">
+    <div class="entry-content">
+      <!--TODO: make this generic-->
+      <h3><a href="{{pathFor 'entryView'}}">QID: {{qid}}</a><span>District: {{district}}</span></h3>
+      <p>
+        Village: {{village}},
+        Submitted by {{author}},
+        <a href="{{pathFor 'entryView'}}">{{pluralize commentsCount "comment"}}</a>
+      </p>
+    </div>
+    
+    <a href="{{pathFor 'entryView'}}" class="discuss btn">Review</a>
+    
+    {{#if ownEntry}}
+      <a href="{{pathFor 'entryEdit'}}" class="discuss btn">Edit</a>
+    {{/if}}
+    
+  </div>
+</template>

@@ -1,9 +1,11 @@
 <template name="entriesList">
+  
   <h2> View Entries </h2>
+
   <div class="entries">
     <!--loop through entries in collection-->
     {{#each entriesWithRank}}
-      {{> entryItem}}
+      {{> entriesListItem}}
     {{/each}}
 
     <!--load more entries-->

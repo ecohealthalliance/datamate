@@ -1,0 +1,10 @@
+<template name="entryViewValues">
+	
+	{{#each questions}}
+	    <tr>
+	      <td style="text-transform:capitalize"><strong> [{{questionNumber}}] </strong> {{question}} </td>
+		  <td> {{answer questionTitle ../_id}} </td>
+	    </tr>
+    {{/each}}
+
+</template>
