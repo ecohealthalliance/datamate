@@ -9,6 +9,7 @@ Package.on_use(function (api) {
 
 	// core files
 	api.add_files(["datamate.html","datamate.js","lib/test.html","lib/test.js"], "client");
+	api.add_files(["datamate.js"], "server");
 
 	// question files
 	api.add_files([
@@ -68,4 +69,8 @@ Package.on_use(function (api) {
 		"collections/questions.js"
 	], "client");
 	*/
+
+	if (typeof api.export !== 'undefined') {
+	    api.export('Datamate', ['client', 'server']);
+	}
 });
