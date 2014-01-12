@@ -3,7 +3,11 @@
 	{{#each questions}}
 	    <tr>
 	      <td style="text-transform:capitalize"><strong> [{{questionNumber}}] </strong> {{question}} </td>
-		  <td> {{answer questionTitle ../_id}} </td>
+		  {{#with answer questionTitle ../_id}} 
+			  <td> {{value}} </td> 
+			  <td> {{formValue}}</td> 
+			  <td> {{ref}} </td>  
+		  {{/with}}
 	    </tr>
     {{/each}}
 
